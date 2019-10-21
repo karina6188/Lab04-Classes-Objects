@@ -6,7 +6,7 @@ Tic-Tac-Toe
 Author: Karina Chen
 
 ## Description
-This is a C# console application called Tic-Tac-Toe. The app can be played by two players. The players place O and X onto the board by typing in the position numbers on the board. This process ends when one of the player wins the game or when the board is filled with O and X.
+This is a C# console application called Tic-Tac-Toe, which is a turn-based program. The app can be played by two players. The players place O and X onto the board by typing in the position numbers on the board. This process ends when one of the player wins the game or when the board is filled with O and X.
 
 ## Getting Started
 Clone this repository to your local machine.
