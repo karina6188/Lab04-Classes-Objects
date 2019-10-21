@@ -54,3 +54,13 @@ Application End
 ## Change Log
 
 1.1: Set up repo and starter code. - 2019 Oct 20
+
+1.2: Add Player instances to Player class. - 2019 Oct 20
+
+1.3: Add CreatePlayer method in program.cs to run the game. - 2019 Oct 20
+
+1.4: Add codes to CheckForWinner method in Game class to determine the winning logic. - 2019 Oct 20
+
+1.5: Add summary comments to methods. - 2019 Oct 20
+
+1.6: 
