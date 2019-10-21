@@ -24,18 +24,21 @@ namespace Lab04_TicTacToe.Classes
 			Board = new Board();
 		}
 
-		/// <summary>
-		/// Activate the Play of the game
-		/// </summary>
-		/// <returns>Winner</returns>
+        /// <summary>
+        /// Activate the Play of the game
+        /// </summary>
+        /// <returns>Winner</returns>
 		public Player Play()
 		{
-            while(!CheckForWinner(board))
+            Board.DisplayBoard();
+
+            while (!CheckForWinner(Board))
             {
-
+                NextPlayer().TakeTurn(Board);
                 SwitchPlayer();
-
+                return Winner;
             }
+            return Winner;
 			//TODO: Complete this method and utilize the rest of the class structure to play the game.
 
             /*
