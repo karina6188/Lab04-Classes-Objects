@@ -15,9 +15,10 @@ namespace Lab04_TicTacToe
         /// </summary>
         static void CreatePlayers()
         {
-            Player player1 = new Player("player1", "O");
-            Player player2 = new Player("player2", "X");
+            Player player1 = new Player("Karina", "O");
+            Player player2 = new Player("Sylvia", "X");
             Game game = new Game(player1, player2);
+            Board board = new Board();
             game.Play();
             Player winner = (game.Play());
             Console.WriteLine($"Congratulations!! {winner} won the game!");

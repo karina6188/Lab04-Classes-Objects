@@ -34,10 +34,8 @@ namespace Lab04_TicTacToe.Classes
 
             while (!CheckForWinner(Board))
             {
-                NextPlayer();
-                TakeTurn(Board);
+                NextPlayer().TakeTurn(Board);
                 SwitchPlayer();
-                return Winner;
             }
             return Winner;
 			//TODO: Complete this method and utilize the rest of the class structure to play the game.
