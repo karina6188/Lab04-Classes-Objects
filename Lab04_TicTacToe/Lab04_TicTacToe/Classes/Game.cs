@@ -34,7 +34,8 @@ namespace Lab04_TicTacToe.Classes
 
             while (!CheckForWinner(Board))
             {
-                NextPlayer().TakeTurn(Board);
+                NextPlayer();
+                TakeTurn(Board);
                 SwitchPlayer();
                 return Winner;
             }
