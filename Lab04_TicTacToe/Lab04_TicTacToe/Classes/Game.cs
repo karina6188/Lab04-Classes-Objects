@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Lab04_TicTacToe.Classes
 {
@@ -36,6 +34,9 @@ namespace Lab04_TicTacToe.Classes
             {
                 NextPlayer().TakeTurn(Board);
                 SwitchPlayer();
+                Console.WriteLine("\n");
+                Board.DisplayBoard();
+                Console.WriteLine("========================");
             }
             return Winner;
 			//TODO: Complete this method and utilize the rest of the class structure to play the game.

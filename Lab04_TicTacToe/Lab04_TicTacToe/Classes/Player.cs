@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Lab04_TicTacToe.Classes
 {
@@ -35,7 +33,7 @@ namespace Lab04_TicTacToe.Classes
 			Position desiredCoordinate = null;
 			while (desiredCoordinate is null)
 			{
-				Console.WriteLine("Please select a location");
+				Console.WriteLine($"Please select a location.");
 				Int32.TryParse(Console.ReadLine(), out int position);
 				desiredCoordinate = PositionForNumber(position);
 			}
@@ -76,7 +74,7 @@ namespace Lab04_TicTacToe.Classes
 		{
 			IsTurn = true;
 
-			Console.WriteLine($"{Name} it is your turn");
+			Console.WriteLine($"{Name} it is your turn: {Marker}");
 
 			Position position = GetPosition(board);
 
@@ -87,6 +85,7 @@ namespace Lab04_TicTacToe.Classes
 			else
 			{
 				Console.WriteLine("This space is already occupied");
+                IsTurn = false;
 			}
 		}
 	}

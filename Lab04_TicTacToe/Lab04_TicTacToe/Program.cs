@@ -15,10 +15,16 @@ namespace Lab04_TicTacToe
         /// </summary>
         static void CreatePlayers()
         {
-            Player player1 = new Player("Karina", "O");
-            Player player2 = new Player("Sylvia", "X");
-            Game game = new Game(player1, player2);
-            Board board = new Board();
+            Console.WriteLine("Let's play a tic-tac-toe game!");
+            Console.WriteLine("Please enter player 1's name: ");
+            string name1 = Console.ReadLine();
+            Console.WriteLine("Please enter player 2's name: ");
+            string name2 = Console.ReadLine();
+            Console.WriteLine("Great! Let's start the game!\n");
+            Player player1 = new Player($"{ name1 }(player 1)", "X");
+            Player player2 = new Player($"{ name2 }(player 2)", "O");
+            Game game = new Game(player2, player1);
+
             game.Play();
             Player winner = (game.Play());
             Console.WriteLine($"Congratulations!! {winner} won the game!");
