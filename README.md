@@ -63,4 +63,8 @@ Application End
 
 1.5: Add summary comments to methods. - 2019 Oct 20
 
-1.6: 
+1.6: Take players' names and set up default player numbers in case no names are entered. - 2019 Oct 25
+
+1.7: The game board is now displayed every time a player selects a location to mark. - 2019 Oct 25
+
+1.8: 
