@@ -34,13 +34,24 @@ namespace Lab04_TicTacToe.Classes
             int counter = 0;
             while (!CheckForWinner(Board))
             {
+                if (counter >= 9)
+                {
+                    Console.WriteLine("It's a tie!");
+                    break;
+                }
                 NextPlayer().TakeTurn(Board);
                 SwitchPlayer();
                 counter++;
+                Board.GameBoard[,];
+
                 Console.WriteLine("\n");
                 Board.DisplayBoard();
-                Console.WriteLine("========================");
             }
+            if(CheckForWinner(Board))
+            {
+                Console.WriteLine("Congratulations! You win the game!");
+            }
+
             return Winner;
             //TODO: Complete this method and utilize the rest of the class structure to play the game.
 
@@ -59,7 +70,6 @@ namespace Lab04_TicTacToe.Classes
             Use any and all pre-existing methods in this program to help construct the method logic. 
              */
         }
-
 
         /// <summary>
         /// Check if winner exists
@@ -95,12 +105,12 @@ namespace Lab04_TicTacToe.Classes
 
                 if (a == b && b == c)
                 {
+                    Console.WriteLine($"THIS IS MARK: a {a}, b {b}, c {c}");
                     return true;
                 }
             }
             return false;
         }
-
 
         /// <summary>
         /// Determine next player
