@@ -1,10 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Lab04_TicTacToe.Classes
 {
-    class Player
+    public class Player
     {
 		public string Name { get; set; }
 		/// <summary>
@@ -18,20 +16,36 @@ namespace Lab04_TicTacToe.Classes
 		public bool IsTurn { get; set; }
 
 
+        public Player (string name, string marker)
+        {
+            Name = name;
+            Marker = marker;
+        }
+
+        /// <summary>
+        /// This method checks if a player enters a position yet. If not, or if the position
+        /// is outside of the range from 1-9, then the player is asked to choose a position again.
+        /// </summary>
+        /// <param name="board"></param>
+        /// <returns></returns>
 		public Position GetPosition(Board board)
 		{
 			Position desiredCoordinate = null;
 			while (desiredCoordinate is null)
 			{
-				Console.WriteLine("Please select a location");
+				Console.WriteLine($"Please select a location: ");
 				Int32.TryParse(Console.ReadLine(), out int position);
 				desiredCoordinate = PositionForNumber(position);
 			}
 			return desiredCoordinate;
-
 		}
 
-
+        /// <summary>
+        /// This method takes in the position the player enters, then creates
+        /// a new Position instance of the player's position.
+        /// </summary>
+        /// <param name="position"></param>
+        /// <returns></returns>
 		public static Position PositionForNumber(int position)
 		{
 			switch (position)
@@ -50,12 +64,17 @@ namespace Lab04_TicTacToe.Classes
 			}
 		}
 
-	
+	    /// <summary>
+        /// This method finds the location the player wants to put his/her marker on.
+        /// If the location is not occupied yet, then the number at the location is
+        /// then replaced with the player's marker.
+        /// </summary>
+        /// <param name="board"></param>
 		public void TakeTurn(Board board)
 		{
 			IsTurn = true;
-
-			Console.WriteLine($"{Name} it is your turn");
+            Console.WriteLine("====================================");
+			Console.WriteLine($"{Name} it is your turn: {Marker}");
 
 			Position position = GetPosition(board);
 
@@ -66,6 +85,7 @@ namespace Lab04_TicTacToe.Classes
 			else
 			{
 				Console.WriteLine("This space is already occupied");
+                IsTurn = false;
 			}
 		}
 	}
