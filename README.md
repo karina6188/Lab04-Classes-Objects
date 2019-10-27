@@ -63,4 +63,4 @@ Application End
 
 1.9: Determine the winner and display the result. - 2019 Oct 27
 
-1.10: Add unit testing.
+1.10: Add unit testing. Pass all tests. The program is completed. - 2019 Oct 27
