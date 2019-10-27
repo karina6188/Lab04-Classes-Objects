@@ -42,16 +42,24 @@ namespace Lab04_TicTacToe.Classes
                 NextPlayer().TakeTurn(Board);
                 SwitchPlayer();
                 counter++;
-                Board.GameBoard[,];
 
-                Console.WriteLine("\n");
+                //Console.WriteLine("\n");
                 Board.DisplayBoard();
-            }
-            if(CheckForWinner(Board))
-            {
-                Console.WriteLine("Congratulations! You win the game!");
-            }
 
+            }
+            if (CheckForWinner(Board))
+            {
+                if (PlayerOne.IsTurn)
+                {
+                    Winner = PlayerTwo;
+                    Console.WriteLine($"Congratulations {Winner.Name}! You win the game!");
+                }
+                else
+                {
+                    Winner = PlayerOne;
+                    Console.WriteLine($"Congratulations {Winner.Name}! You win the game!");
+                }
+            }
             return Winner;
             //TODO: Complete this method and utilize the rest of the class structure to play the game.
 
@@ -105,7 +113,6 @@ namespace Lab04_TicTacToe.Classes
 
                 if (a == b && b == c)
                 {
-                    Console.WriteLine($"THIS IS MARK: a {a}, b {b}, c {c}");
                     return true;
                 }
             }
@@ -130,6 +137,7 @@ namespace Lab04_TicTacToe.Classes
             {
                 PlayerOne.IsTurn = false;
                 PlayerTwo.IsTurn = true;
+
             }
             else
             {
@@ -137,6 +145,5 @@ namespace Lab04_TicTacToe.Classes
                 PlayerTwo.IsTurn = false;
             }
         }
-
     }
 }

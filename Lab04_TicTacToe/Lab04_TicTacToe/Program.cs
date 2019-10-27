@@ -25,6 +25,7 @@ namespace Lab04_TicTacToe
             Player player2 = new Player($"{ name2 }(player 2)", "O");
             Game game = new Game(player2, player1);
             game.Play();
+
         }
         // TODO: You are requesting a Winner to be returned, Determine who the winner is output the celebratory message to the correct player. If it's a draw, tell them that there is no winner. 
     }

@@ -29,27 +29,19 @@ Open the program using Visual Studio and click "Start" button to run this progra
 
 Application Start
 
-![Alt execution capture]()
+![Alt execution capture](/captures/app_start.JPG)
 
 Using the Application
 
-![Alt execution capture]()
+![Alt execution capture](/captures/app_start2.JPG)
 
 Using the Application
 
-![Alt execution capture]()
-
-Using the Application
-
-![Alt execution capture]()
-
-Using the Application
-
-![Alt execution capture]()
+![Alt execution capture](/captures/app_execution1.JPG)
 
 Application End
 
-![Alt execution capture]()
+![Alt execution capture](/captures/app_execution1.JPG)
 
 ## Change Log
 
@@ -67,4 +59,8 @@ Application End
 
 1.7: The game board is now displayed every time a player selects a location to mark. - 2019 Oct 25
 
-1.8: 
+1.8: Add codes to stop the game once a player wins or the board is all marked. - 2019 Oct 27
+
+1.9: Determine the winner and display the result. - 2019 Oct 27
+
+1.10: Add unit testing.
