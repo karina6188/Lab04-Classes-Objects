@@ -41,7 +41,7 @@ Using the Application
 
 Application End
 
-![Alt execution capture](/captures/app_execution1.JPG)
+![Alt execution capture](/captures/app_execution2.JPG)
 
 ## Change Log
 
