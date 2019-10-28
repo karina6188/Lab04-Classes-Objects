@@ -43,6 +43,9 @@ Application End
 
 ![Alt execution capture](/captures/app_execution2.JPG)
 
+## Resources
+https://www.geeksforgeeks.org/merge-two-sorted-linked-lists/
+
 ## Change Log
 
 1.1: Set up repo and starter code. - 2019 Oct 20
