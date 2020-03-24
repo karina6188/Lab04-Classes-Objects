@@ -10,10 +10,8 @@ namespace TicTacToeTests
         [Fact]
         public void CheckWinners()
         {
-            string name1 = "Karina";
-            string name2 = "Amanda";
-            Player player1 = new Player($"{ name1 }(player 1)", "X");
-            Player player2 = new Player($"{ name2 }(player 2)", "O");
+            Player player1 = new Player($"Karina", "X");
+            Player player2 = new Player($"Amanda", "O");
             Game game = new Game(player1, player2);
 
             game.Board.GameBoard = new string[,]
@@ -31,10 +29,8 @@ namespace TicTacToeTests
         [Fact]
         public void StartGame()
         {
-            string name1 = "Karina";
-            string name2 = "Amanda";
-            Player player1 = new Player($"{ name1 }(player 1)", "X");
-            Player player2 = new Player($"{ name2 }(player 2)", "O");
+            Player player1 = new Player($"Karina", "X");
+            Player player2 = new Player($"Amanda", "O");
             Game game = new Game(player1, player2);
 
             game.Board.GameBoard = new string[,]
@@ -44,16 +40,14 @@ namespace TicTacToeTests
                 {"X", "O", "9"},
             };
 
-            Assert.Equal($"{ name1 }(player 1)", game.Play().Name);
+            Assert.Equal($"Karina", game.Play().Name);
         }
 
         [Fact]
         public void TestSwitchPlayer()
         {
-            string name1 = "Karina";
-            string name2 = "Amanda";
-            Player player1 = new Player($"{ name1 }(player 1)", "X");
-            Player player2 = new Player($"{ name2 }(player 2)", "O");
+            Player player1 = new Player($"Karina", "X");
+            Player player2 = new Player($"Amanda", "O");
             Game game = new Game(player1, player2);
 
             game.Board.GameBoard = new string[,]
@@ -63,16 +57,14 @@ namespace TicTacToeTests
                 {"X", "O", "9"},
             };
 
-            Assert.Equal($"{ name2 }(player 2)", game.NextPlayer().Name);
+            Assert.Equal($"Amanda", game.NextPlayer().Name);
         }
 
         [Fact]
         public void TestSwitchAnotherPlayer()
         {
-            string name1 = "Karina";
-            string name2 = "Amanda";
-            Player player1 = new Player($"{ name1 }(player 1)", "X");
-            Player player2 = new Player($"{ name2 }(player 2)", "O");
+            Player player1 = new Player($"Karina", "X");
+            Player player2 = new Player($"Amanda", "O");
             Game game = new Game(player1, player2);
 
             game.Board.GameBoard = new string[,]
@@ -82,18 +74,14 @@ namespace TicTacToeTests
                 {"X", "O", "X"},
             };
 
-            Assert.Equal($"{ name2 }(player 2)", game.NextPlayer().Name);
-            Assert.Equal($"{ name1 }(player 1)", game.PlayerOne.Name);
+            Assert.Equal($"Amanda", game.NextPlayer().Name);
+            Assert.Equal($"Karina", game.PlayerOne.Name);
         }
 
         [Fact]
         public void TestBoardPosition()
         {
-            string name1 = "Karina";
-            string name2 = "Amanda";
-            Player player1 = new Player($"{ name1 }(player 1)", "X");
-            Player player2 = new Player($"{ name2 }(player 2)", "O");
-            Game game = new Game(player1, player2);
+            Game game = new Game(new Player($"Karina", "X"), new Player($"Amanda", "O"));
 
             game.Board.GameBoard = new string[,]
             {
