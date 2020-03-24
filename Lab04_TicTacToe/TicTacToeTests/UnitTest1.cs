@@ -8,7 +8,28 @@ namespace TicTacToeTests
     public class UnitTest1
     {
         [Fact]
-        public void TestWinners()
+        public void CheckWinners()
+        {
+            string name1 = "Karina";
+            string name2 = "Amanda";
+            Player player1 = new Player($"{ name1 }(player 1)", "X");
+            Player player2 = new Player($"{ name2 }(player 2)", "O");
+            Game game = new Game(player1, player2);
+
+            game.Board.GameBoard = new string[,]
+            {
+                {"1", "2", "X"},
+                {"4", "X", "6"},
+                {"X", "8", "9"},
+            };
+
+            bool outcome = game.CheckForWinner(game.Board);
+
+            Assert.True(outcome);
+        }
+
+        [Fact]
+        public void StartGame()
         {
             string name1 = "Karina";
             string name2 = "Amanda";
@@ -45,7 +66,6 @@ namespace TicTacToeTests
             Assert.Equal($"{ name2 }(player 2)", game.NextPlayer().Name);
         }
 
-
         [Fact]
         public void TestSwitchAnotherPlayer()
         {
@@ -63,6 +83,7 @@ namespace TicTacToeTests
             };
 
             Assert.Equal($"{ name2 }(player 2)", game.NextPlayer().Name);
+            Assert.Equal($"{ name1 }(player 1)", game.PlayerOne.Name);
         }
 
         [Fact]
